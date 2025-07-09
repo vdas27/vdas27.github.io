@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import profilePic from '../assets/profile-picture.JPEG';
 import CircularText from '../CircularText';
 
-const linkedinUrl = 'https://www.linkedin.com/in/vivandas/';
+const linkedinUrl = 'https://www.linkedin.com/in/vivan-das-5782b1283/';
 const githubUrl = 'https://github.com/vdas27';
 const email = 'vdas@uchicago.edu';
 
