@@ -1,3 +1,8 @@
+import uchicagoImg from './assets/UChicago 1.jpg';
+import premierLeagueImg from './assets/premier-league.png';
+import goImg from './assets/go.webp';
+import reactImg from './assets/react.svg';
+
 export const projectsData = [
   {
     id: 'trading-competition',
@@ -53,7 +58,7 @@ export const projectsData = [
              Visit the linked GitHub repo for a full breakdown of our strategy and implementation.
         </p>
     `,
-    image: '/src/assets/uchicago 1.jpg',
+    image: uchicagoImg,
     github: 'https://github.com/ayushpillai1028/uchicago-trading-competition',
     demo: '',
     tags: ['Python', 'Market Making', 'Portfolio Management', 'Algorithmic Trading', 'Data Analysis'],
@@ -212,7 +217,7 @@ export const projectsData = [
     </ul>
     `,
     video: '',
-    image: '/src/assets/premier-league.png',
+    image: premierLeagueImg,
     github: 'https://github.com/vdas27/vdas27.github.io',
     tags: ['ML', 'scikit learn', 'pandas', 'Web Scraping', 'Data Analysis'],
   },
@@ -283,7 +288,7 @@ export const projectsData = [
     </p>
     `,
     video: '',
-    image: '/src/assets/go.webp',
+    image: goImg,
     tags: ['Python', 'Game Development', 'Object Oriented Programming', 'Git Collaboration', 'QA Testing'],
   },
   {
@@ -296,7 +301,7 @@ export const projectsData = [
     It's an ongoing project, so let me know what you think!
     `,
     video: '',
-    image: '/src/assets/react.svg',
+    image: reactImg,
     github: 'https://github.com/vdas27/vdas27.github.io',
     tags: ['React', 'JSX', 'CSS Modules', 'UI/UX', 'HTML'],
   },
