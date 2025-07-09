@@ -1,0 +1,221 @@
+/* Chrome/blue/cyan themed app background */
+.appBg {
+  min-height: 100vh;
+  width: 100vw;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow-x: hidden;
+}
+
+/* Directional Slide Transitions */
+.slideContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.slidePage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  will-change: transform, opacity;
+}
+
+/* Slide In Animations */
+.slideIn {
+  animation: slideInFromCenter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slideInLeft {
+  animation: slideInFromLeft 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slideInRight {
+  animation: slideInFromRight 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slideInUp {
+  animation: slideInFromBottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slideInDown {
+  animation: slideInFromTop 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Slide Out Animations */
+.slideOut {
+  animation: slideOutToCenter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slideOutLeft {
+  animation: slideOutToLeft 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slideOutRight {
+  animation: slideOutToRight 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slideOutUp {
+  animation: slideOutToTop 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slideOutDown {
+  animation: slideOutToBottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Slide In Keyframes */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromCenter {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Slide Out Keyframes */
+@keyframes slideOutToLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutToRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutToCenter {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToTop {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutToBottom {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* Enhanced slide effects with chrome/blue/cyan glow */
+.slidePage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(58, 209, 255, 0.05) 20%, 
+    rgba(0, 229, 255, 0.1) 40%, 
+    rgba(58, 209, 255, 0.05) 60%, 
+    transparent 100%);
+  opacity: 0;
+  animation: slideGlow 0.8s ease-out;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes slideGlow {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+/* Smooth transitions for all elements */
+.slidePage * {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+} 

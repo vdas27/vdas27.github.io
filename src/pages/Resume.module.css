@@ -1,0 +1,111 @@
+.resumePage {
+  background: linear-gradient(120deg, #232a34 0%, #2e3a4f 100%);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(58, 209, 255, 0.12), 0 2px 0 0 #3ad1ff inset;
+  margin: 2.5rem auto 2rem auto;
+  max-width: 1200px;
+  padding: 2.5rem 2rem;
+  color: #e0f7fa;
+  backdrop-filter: blur(10px) saturate(1.2);
+  text-align: center;
+  position: relative;
+  font-family: 'Orbitron', 'Roboto Mono', Arial, Helvetica, sans-serif;
+}
+.resumePage h1 {
+  font-size: 2.3rem;
+  color: #3ad1ff;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 12px #3ad1ff55, 0 2px 0 #fff;
+  font-family: inherit;
+}
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 1.5rem;
+}
+.loadingSpinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(58, 209, 255, 0.2);
+  border-top: 4px solid #3ad1ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 20px rgba(58, 209, 255, 0.3);
+}
+.loadingContainer p {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.1rem;
+  color: #b2ebf2;
+  margin: 0;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.viewerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.resumeViewerLarge {
+  width: 100%;
+  max-width: 900px;
+  min-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  background: white;
+  border: 2px solid rgba(58, 209, 255, 0.3);
+}
+.downloadBtn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #3ad1ff 0%, #00e5ff 100%);
+  color: #1e293b;
+  text-decoration: none;
+  font-family: 'Orbitron', 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  box-shadow: 
+    0 4px 15px rgba(58, 209, 255, 0.4),
+    0 0 30px rgba(58, 209, 255, 0.2);
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+.downloadBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 20px rgba(58, 209, 255, 0.6),
+    0 0 40px rgba(58, 209, 255, 0.3);
+  background: linear-gradient(135deg, #00e5ff 0%, #3ad1ff 100%);
+}
+@media (max-width: 768px) {
+  .resumePage {
+    padding: 2rem 1.5rem;
+    margin: 1.5rem auto 1rem auto;
+  }
+  .resumePage h1 {
+    font-size: 2rem;
+  }
+  .resumeViewerLarge {
+    min-height: 60vh;
+  }
+  .loadingContainer {
+    min-height: 300px;
+  }
+  .loadingSpinner {
+    width: 50px;
+    height: 50px;
+  }
+  .downloadBtn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+} 
